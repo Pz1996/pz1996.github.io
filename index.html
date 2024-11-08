@@ -1,293 +1,277 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zhe Pan's Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons/css/academicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f0f0f0;
         }
-        header, footer {
-            background-color: #333;
-            color: #fff;
-            padding: 1em 0;
-            text-align: center;
-        }
+
         nav {
+            background-color: #333;
+            padding: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #444;
-            padding: 0 20px;
+            color: white;
         }
-        nav .left {
+
+        .left a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .left i {
+            font-size: 24px;
+        }
+
+        .right {
             display: flex;
             align-items: center;
         }
-        nav .left a {
-            color: white;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        nav .left a:hover {
-            opacity: 0.7;
-        }
-        nav .right {
-            display: flex;
-            align-items: center;
-        }
-        nav .right a, nav .right button {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin-left: 15px;
-            background: none;
-            border: 1px solid transparent;
-            cursor: pointer;
-        }
-        nav .right a:hover, nav .right button:hover {
-            background-color: #ddd;
-            color: black;
-            border: 1px solid #444;
-        }
-        .language-toggle button {
+
+        .btn-group button {
             background-color: #444;
             color: white;
             border: none;
             padding: 10px 20px;
-            margin: 0 5px;
+            margin-left: 10px;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
-        .language-toggle button:hover {
-            background-color: #ddd;
-            color: black;
+
+        .btn-group button:hover {
+            background-color: #555;
         }
-        .container {
+
+        .content {
             padding: 20px;
-        }
-        .content .chinese, .content .english {
-            display: none;
-        }
-        .show-chinese .chinese, .show-english .english {
-            display: block;
-        }
-        footer {
             margin-top: 20px;
         }
 
-                /* 媒体查询，调整手机端布局 */
-                @media screen and (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .left, .right {
-                display: flex;
-                justify-content: center;
-                width: 100%;
-                margin-bottom: 10px;
-            }
-
-            .language-toggle {
-                margin-top: 10px;
-            }
-
-            .left a, .right a {
-                margin: 5px 15px;
-                font-size: 20px;
-            }
-
-            /* 按钮显示 */
-            #btn-chinese, #btn-english {
-                display: block;
-            }
-
-            #btn-chinese {
-                margin-top: 10px;
-            }
+        .content div {
+            display: none;
         }
 
-        /* 更小的屏幕（例如手机竖屏） */
-        @media screen and (max-width: 480px) {
-            .left a, .right a {
-                font-size: 18px;
-            }
-
-            .language-toggle button {
-                padding: 5px 10px;
-                font-size: 14px;
-            }
+        .content .active {
+            display: block;
         }
+  
+        /* 头像样式 */
+        .avatar {
+            width: 100px;  /* 头像宽度 */
+            height: 100px; /* 头像高度 */
+            border-radius: 50%; /* 圆形 */
+            object-fit: cover;  /* 图片填充，保持比例 */
+        }
+
+        /* 个人信息样式 */
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .name {
+            margin-left: 15px; /* 头像和名字之间的间隔 */
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
+    <!-- Navigation Bar -->
     <nav>
         <div class="left">
             <a href="mailto:pz@mail.tsinghua.edu.cn" title="Email">
-                <i class="fas fa-envelope" style="font-size: 24px;"></i>
+                <i class="fas fa-envelope"></i>
             </a>
             <a href="https://orcid.org/0000-0002-0355-8099" target="_blank" title="ORCID">
-                <i class="ai ai-orcid" style="font-size: 24px;"></i>
+                <i class="ai ai-orcid"></i>
             </a>
             <a href="https://github.com/Pz1996" target="_blank" title="Github">
-                <i class="fab fa-github" style="font-size: 24px;"></i>
+                <i class="fab fa-github"></i>
             </a>
         </div>
 
         <div class="right">
-            <a href="#resume" id="nav-resume">简历</a>
-            <a href="#publications" id="nav-publications">发表</a>
-            <a href="#hobbies" id="nav-hobbies">爱好</a>
-            <div class="language-toggle">
-                <button onclick="setLanguage('chinese')" id="btn-chinese" style="display: none;">中文</button>
-                <button onclick="setLanguage('english')" id="btn-english" style="display: none;">English</button>
+            <div class="btn-group">
+                <button data-content="resume">简历</button>
+                <button data-content="publications">发表</button>
+                <button data-content="hobbies">爱好</button>
+                <button data-content="language">English</button>
             </div>
         </div>
     </nav>
 
-    <!-- Content -->
-    <div class="container content show-english">
-        <div class="english">
-            <section id="resume">
-                <h2>Education</h2>
-                <ul>
-                    <li><strong>Ph.D.</strong>, Computer Science and Technology, Zhejiang University, Sept 2018 - Jun 2024  
-                        <br> Advisors: Prof. Shuibing He (Researcher)
-                    </li>
-                    <li><strong>B.S.</strong>, Computer Science and Technology, Zhejiang University, Sept 2014 - Jun 2018  
-                        <br> Advisor: Prof. Xiaohong Jiang (Associate Professor)
-                    </li>
-                </ul>
+    <!-- Content Section -->
+    <div class="content">
+        <!-- Resume Section -->
+        <div id="resume" class="content-item">
 
-                <h2>Work Experience</h2>
-                <ul>
-                    <li><strong>Jul 2024 - Present</strong>, Postdoctoral Researcher, Department of Computer Science and Technology, Tsinghua University  
-                        <br> Research Focus: Brain-Inspired Computing, Large Models, and Graph Computing, Co-advisor: Prof. Youhui Zhang (Researcher)
-                    </li>
-                    <li><strong>Jun 2019 - Sep 2019</strong>, Digital Verification Intern, Iluvatar CoreX
-                        <br> Responsibilities: Involved in digital circuit verification and testing, assisting in chip functionality validation.
-                    </li>
-                    <li><strong>Jun 2020 - Sep 2020</strong>, Search and Recommendation Intern, Alibaba
-                        <br> Research Focus: Optimizing and implementing efficient maximal biclique enumeration algorithms.
-                    </li>
-                    <li><strong>May 2020 - Dec 2020</strong>, New Architecture Chipset Intern, Zhejiang Laboratory  
-                        <br> Research Focus: Hardware acceleration for Sigmoid, Batch Normalization, and related operations.
-                    </li>
-                </ul>
+            <div class="profile">
+                <img src="images/profile.png" alt="头像" class="avatar">
+                <h2 class="name">张三</h2> <!-- 这里的名字可以根据需要修改 -->
+            </div>
 
-            </section>
-
-            <section id="publications">
-                <h2>Publications</h2>
-                <ul>
-                    <li><strong>Paper 1:</strong> High-performance Graph Computing Framework</li>
-                    <li><strong>Paper 2:</strong> Architecture Optimization for Parallel Processing</li>
-                    <li><strong>Paper 3:</strong> Scalable Distributed Systems</li>
-                </ul>
-            </section>
-
-            <section id="hobbies">
-                <h2>Hobbies</h2>
-                <p>In my free time, I enjoy reading, traveling, and playing chess. I also have a passion for photography and exploring new technologies.</p>
-            </section>
+            <h2>教育背景</h2>
+            <ul>
+                <li><strong>博士</strong>，计算机科学与技术，浙江大学，2018年9月 - 2024年6月  
+                    <br> 导师：何水兵研究员
+                </li>
+                <li><strong>本科    </strong>，计算机科学与技术，浙江大学，2014年9月 - 2018年6月  
+                    <br> 导师：姜晓红副教授
+                </li>
+            </ul>
+        
+            <h2>工作经历</h2>
+            <ul>
+                <li><strong>2024年7月 - 至今</strong>，博士后研究员，清华大学计算机科学与技术系  
+                    <br> 主要研究方向：类脑计算、大模型与图计算，合作导师：张悠慧研究员
+                </li>
+                <li><strong>2019年6月 - 2019年9月</strong>，数字验证实习生，天数智芯公司  
+                    <br> 负责数字电路验证与测试，协助完成芯片功能验证。
+                </li>
+                <li><strong>2020年6月 - 2020年9月</strong>，搜索推荐实习生，阿里巴巴搜索推荐事业部  
+                    <br> 研究高效极大二分团枚举算法的优化与实现。
+                </li>
+                <li><strong>2020年5月 - 2020年12月</strong>，新型架构芯片组实习生，之江实验室  
+                    <br> 研究硬件加速Sigmoid、Batch Normalization等操作的优化。
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Publications Section -->
+        <div id="publications" class="content-item">
+            <h2>发表</h2>
+            <p>这里是我的研究论文和学术出版物。</p>
+        </div>
+        
+        <!-- Hobbies Section -->
+        <div id="hobbies" class="content-item">
+            <h2>爱好</h2>
+            <p>在业余时间，我喜欢阅读、旅行和下棋。我也热衷于摄影以及探索新技术。</p>
         </div>
 
-        <div class="chinese">
-            <section id="resume">
-                <h2>教育背景</h2>
-                <ul>
-                    <li><strong>博士</strong>，计算机科学与技术，浙江大学，2018年9月 - 2024年6月  
-                        <br> 导师：何水兵研究员
-                    </li>
-                    <li><strong>本科    </strong>，计算机科学与技术，浙江大学，2014年9月 - 2018年6月  
-                        <br> 导师：姜晓红副教授
-                    </li>
-                </ul>
-            
-                <h2>工作经历</h2>
-                <ul>
-                    <li><strong>2024年7月 - 至今</strong>，博士后研究员，清华大学计算机科学与技术系  
-                        <br> 主要研究方向：类脑计算、大模型与图计算，合作导师：张悠慧研究员
-                    </li>
-                    <li><strong>2019年6月 - 2019年9月</strong>，数字验证实习生，天数智芯公司  
-                        <br> 负责数字电路验证与测试，协助完成芯片功能验证。
-                    </li>
-                    <li><strong>2020年6月 - 2020年9月</strong>，搜索推荐实习生，阿里巴巴搜索推荐事业部  
-                        <br> 研究高效极大二分团枚举算法的优化与实现。
-                    </li>
-                    <li><strong>2020年5月 - 2020年12月</strong>，新型架构芯片组实习生，之江实验室  
-                        <br> 研究硬件加速Sigmoid、Batch Normalization等操作的优化。
-                    </li>
-                </ul>
-            </section>
+        <!-- English Version -->
+        <div id="english-resume" class="content-item">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>Ph.D.</strong>, Computer Science and Technology, Zhejiang University, Sept 2018 - Jun 2024  
+                    <br> Advisors: Prof. Shuibing He (Researcher)
+                </li>
+                <li><strong>B.S.</strong>, Computer Science and Technology, Zhejiang University, Sept 2014 - Jun 2018  
+                    <br> Advisor: Prof. Xiaohong Jiang (Associate Professor)
+                </li>
+            </ul>
 
-            <section id="publications">
-                <h2>发表</h2>
-                <ul>
-                    <li><strong>论文 1:</strong> 高性能图计算框架</li>
-                    <li><strong>论文 2:</strong> 并行处理架构优化</li>
-                    <li><strong>论文 3:</strong> 可扩展分布式系统</li>
-                </ul>
-            </section>
+            <h2>Work Experience</h2>
+            <ul>
+                <li><strong>Jul 2024 - Present</strong>, Postdoctoral Researcher, Department of Computer Science and Technology, Tsinghua University  
+                    <br> Research Focus: Brain-Inspired Computing, Large Models, and Graph Computing, Co-advisor: Prof. Youhui Zhang (Researcher)
+                </li>
+                <li><strong>Jun 2019 - Sep 2019</strong>, Digital Verification Intern, Iluvatar CoreX
+                    <br> Responsibilities: Involved in digital circuit verification and testing, assisting in chip functionality validation.
+                </li>
+                <li><strong>Jun 2020 - Sep 2020</strong>, Search and Recommendation Intern, Alibaba
+                    <br> Research Focus: Optimizing and implementing efficient maximal biclique enumeration algorithms.
+                </li>
+                <li><strong>May 2020 - Dec 2020</strong>, New Architecture Chipset Intern, Zhejiang Laboratory  
+                    <br> Research Focus: Hardware acceleration for Sigmoid, Batch Normalization, and related operations.
+                </li>
+            </ul>
 
-            <section id="hobbies">
-                <h2>爱好</h2>
-                <p>在业余时间，我喜欢阅读、旅行和下棋。我也热衷于摄影以及探索新技术。</p>
-            </section>
+        </div>
+
+        <div id="english-publications" class="content-item">
+            <h2>Publications</h2>
+            <p>Here are my research papers and academic publications.</p>
+        </div>
+
+        <div id="english-hobbies" class="content-item">
+            <h2>Hobbies</h2>
+            <p>In my free time, I enjoy reading, traveling, and playing chess. I also have a passion for photography and exploring new technologies.</p>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Zhe Pan. All rights reserved.</p>
-    </footer>
-
+    <!-- JavaScript -->
     <script>
-        function setLanguage(language) {
-            const content = document.querySelector('.content');
-            const navResume = document.getElementById('nav-resume');
-            const navPublications = document.getElementById('nav-publications');
-            const navHobbies = document.getElementById('nav-hobbies');
-            const btnChinese = document.getElementById('btn-chinese');
-            const btnEnglish = document.getElementById('btn-english');
-            
-            if (language === 'chinese') {
-                content.classList.add('show-chinese');
-                content.classList.remove('show-english');
-                navResume.textContent = "简历";
-                navPublications.textContent = "发表";
-                navHobbies.textContent = "爱好";
-                btnChinese.style.display = 'none';  // Hide Chinese button when on Chinese page
-                btnEnglish.style.display = 'inline-block';  // Show English button when on Chinese page
-            } else {
-                content.classList.add('show-english');
-                content.classList.remove('show-chinese');
-                navResume.textContent = "Resume";
-                navPublications.textContent = "Publications";
-                navHobbies.textContent = "Hobbies";
-                btnChinese.style.display = 'inline-block';  // Show Chinese button when on English page
-                btnEnglish.style.display = 'none';  // Hide English button when on English page
+        // 定义语言和内容变量
+        let Language = 'zh';  // 默认为中文
+        let Content = 'resume'; // 默认为简历
+
+        // 初始化内容显示
+        function showContent() {
+            // 隐藏所有内容
+            document.querySelectorAll('.content-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // 根据Content显示对应内容
+            const contentId = (Language === 'zh' ? Content : 'english-' + Content);
+            const contentElement = document.getElementById(contentId);
+            if (contentElement) {
+                contentElement.classList.add('active');
             }
         }
 
-        // Optional: Auto detect browser language
-        const userLang = navigator.language || navigator.userLanguage;
-        if (userLang.startsWith('zh')) {
-            setLanguage('chinese');
-        } else {
-            setLanguage('english');
+        // 切换语言
+        function toggleLanguage() {
+            // 切换语言
+            Language = (Language === 'zh' ? 'en' : 'zh');
+
+
+            // 更新按钮文本
+            const languageButton = document.querySelector('.btn-group button[data-content="language"]');
+            if (languageButton) {
+                if (Language === 'zh') {
+                    languageButton.textContent = 'English';  // 中文时按钮显示 "English"
+                } else {
+                    languageButton.textContent = '中文';    // 英文时按钮显示 "中文"
+                }
+            }
+
+            // 更新其他按钮文本（如果有其他语言依赖的按钮）
+            const resumeButton = document.querySelector('.btn-group button[data-content="resume"]');
+            const publicationsButton = document.querySelector('.btn-group button[data-content="publications"]');
+            const hobbiesButton = document.querySelector('.btn-group button[data-content="hobbies"]');
+            
+            if (resumeButton) resumeButton.textContent = (Language === 'zh' ? '简历' : 'Resume');
+            if (publicationsButton) publicationsButton.textContent = (Language === 'zh' ? '发表' : 'Publications');
+            if (hobbiesButton) hobbiesButton.textContent = (Language === 'zh' ? '爱好' : 'Hobbies');
+
+            // 更新内容显示
+            showContent();
+
         }
+
+
+        // 绑定按钮点击事件
+        document.querySelectorAll('.btn-group button').forEach(button => {
+            button.addEventListener('click', function() {
+                const content = this.getAttribute('data-content');
+                if (content === 'language') {
+                    toggleLanguage();
+                } else {
+                    Content = content;
+                    showContent();
+                }
+            });
+        });
+
+        // 初次显示内容
+        showContent();
     </script>
 
 </body>
