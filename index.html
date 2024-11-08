@@ -67,8 +67,8 @@
   
         /* 头像样式 */
         .avatar {
-            width: 100px;  /* 头像宽度 */
-            height: 100px; /* 头像高度 */
+            width: 120px;  /* 增大头像的宽度 */
+            height: 120px; /* 增大头像的高度 */
             border-radius: 50%; /* 圆形 */
             object-fit: cover;  /* 图片填充，保持比例 */
         }
@@ -77,14 +77,21 @@
         .profile {
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px; /* 增大底部间隔 */
+            padding: 10px; /* 增加内边距，确保头像和名字与边缘有空间 */
+            background-color: #f9f9f9; /* 可选，给个人信息区域加一个背景色 */
+            border-radius: 8px; /* 圆角效果 */
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* 增加阴影效果，使个人信息更突出 */
         }
 
+        /* 名字样式 */
         .name {
-            margin-left: 15px; /* 头像和名字之间的间隔 */
-            font-size: 24px;
+            margin-left: 20px; /* 增加头像和名字之间的间隔 */
+            font-size: 28px; /* 增大字体大小 */
             font-weight: bold;
+            color: #333; /* 调整字体颜色 */
         }
+
 
 
     </style>
@@ -114,16 +121,14 @@
             </div>
         </div>
     </nav>
-
+    <div class="profile">
+        <img src="images/profile.png" alt="头像" class="avatar">
+        <h2 class="name">Zhe Pan （潘哲）</h2> <!-- 这里的名字可以根据需要修改 -->
+    </div>
     <!-- Content Section -->
     <div class="content">
         <!-- Resume Section -->
         <div id="resume" class="content-item">
-
-            <div class="profile">
-                <img src="images/profile.png" alt="头像" class="avatar">
-                <h2 class="name">张三</h2> <!-- 这里的名字可以根据需要修改 -->
-            </div>
 
             <h2>教育背景</h2>
             <ul>
@@ -155,13 +160,39 @@
         <!-- Publications Section -->
         <div id="publications" class="content-item">
             <h2>发表</h2>
-            <p>这里是我的研究论文和学术出版物。</p>
+            <ol>
+                <li><strong>AMBEA: Aggressive Maximal Biclique Enumeration in Large Bipartite Graph Computing</strong>, <strong>Zhe Pan</strong>, Xu Li, Shuibing He, Xuechen Zhang, Rui Wang, Yunjun Gao, Gang Chen, Xian He Sun, <i>IEEE Transactions on Computers</i>, Vol. 73, No. 12, December 2024.</li>
+                <li><strong>Enumeration of Billions of Maximal Bicliques in Bipartite Graphs without Using GPUs</strong>, <strong>Zhe Pan</strong>, Shuibing He, Xu Li, Xuechen Zhang, Yanlong Yin, Rui Wang, Lidan Shou, Mingli Song, Xian-He Sun, Gang Chen, <i>International Conference for High Performance Computing, Networking, Storage and Analysis, SC</i>, 2024.</li>
+                <li><strong>Efficient Maximal Biclique Enumeration on GPUs</strong>, <strong>Zhe Pan</strong>, Shuibing He, Xu Li, Xuechen Zhang, Rui Wang, Gang Chen, <i>International Conference for High Performance Computing, Networking, Storage and Analysis, SC</i>, 2023. <a href="https://doi.org/10.1145/3581784.3607059">DOI: 10.1145/3581784.3607059</a></li>
+                <li><strong>A Modular Approximation Methodology for Efficient Fixed-Point Hardware Implementation of the Sigmoid Function</strong>, <strong>Zhe Pan</strong>, Zonghua Gu, Xiaohong Jiang, Guoquan Zhu, De Ma, <i>IEEE Transactions on Industrial Electronics</i>, 2022, Vol. 69, No. 10, pp. 10694-10703. <a href="https://doi.org/10.1109/TIE.2022.3146573">DOI: 10.1109/TIE.2022.3146573</a></li>
+                <li><strong>An FPGA-Optimized Architecture of Real-time Farneback Optical Flow</strong>, <strong>Zhe Pan</strong>, Yuruo Jin, Xiaohong Jiang, Jian Wu, <i>Proceedings - 28th IEEE International Symposium on Field-Programmable Custom Computing Machines, FCCM 2020</i>, 2020, pp. 223. <a href="https://doi.org/10.1109/FCCM48280.2020.00054">DOI: 10.1109/FCCM48280.2020.00054</a></li>
+                <li><strong>Hybrid XML Parser Based on Software and Hardware Co-design</strong>, <strong>Zhe Pan</strong>, Xiaohong Jiang, Jian Wu, Xiang Li, <i>Proceedings - 27th IEEE International Symposium on Field-Programmable Custom Computing Machines, FCCM 2019</i>, 2019, pp. 325. <a href="https://doi.org/10.1109/FCCM.2019.00066">DOI: 10.1109/FCCM.2019.00066</a></li>
+    
+            </ol>
+
         </div>
         
         <!-- Hobbies Section -->
         <div id="hobbies" class="content-item">
             <h2>爱好</h2>
-            <p>在业余时间，我喜欢阅读、旅行和下棋。我也热衷于摄影以及探索新技术。</p>
+            <ul>
+                <li><strong>爬山</strong>
+                  <p>我喜欢爬山，享受大自然的风光和挑战自我的感觉。</p>
+                </li>
+                <li><strong>游泳</strong>
+                  <p>游泳是一项我非常喜欢的运动，能够放松身心并保持健康。</p>
+                </li>
+                <li><strong>做饭</strong>
+                  <p>我喜欢尝试不同的菜肴，做饭是一种让我感到放松和创造的方式。</p>
+                </li>
+                <li><strong>笛子</strong>
+                  <p>吹笛子是我放松和享受音乐的方式，音符可以让我感到平静。</p>
+                </li>
+                <li><strong>交友</strong>
+                  <p>我喜欢交朋友，分享生活中的点滴并建立真诚的关系。</p>
+                </li>
+              </ul>
+              
         </div>
 
         <!-- English Version -->
@@ -196,12 +227,37 @@
 
         <div id="english-publications" class="content-item">
             <h2>Publications</h2>
-            <p>Here are my research papers and academic publications.</p>
+            <ol>
+                <li><strong>AMBEA: Aggressive Maximal Biclique Enumeration in Large Bipartite Graph Computing</strong>, <strong>Zhe Pan</strong>, Xu Li, Shuibing He, Xuechen Zhang, Rui Wang, Yunjun Gao, Gang Chen, Xian He Sun, <i>IEEE Transactions on Computers</i>, Vol. 73, No. 12, December 2024.</li>
+                <li><strong>Enumeration of Billions of Maximal Bicliques in Bipartite Graphs without Using GPUs</strong>, <strong>Zhe Pan</strong>, Shuibing He, Xu Li, Xuechen Zhang, Yanlong Yin, Rui Wang, Lidan Shou, Mingli Song, Xian-He Sun, Gang Chen, <i>International Conference for High Performance Computing, Networking, Storage and Analysis, SC</i>, 2024.</li>
+                <li><strong>Efficient Maximal Biclique Enumeration on GPUs</strong>, <strong>Zhe Pan</strong>, Shuibing He, Xu Li, Xuechen Zhang, Rui Wang, Gang Chen, <i>International Conference for High Performance Computing, Networking, Storage and Analysis, SC</i>, 2023. <a href="https://doi.org/10.1145/3581784.3607059">DOI: 10.1145/3581784.3607059</a></li>
+                <li><strong>A Modular Approximation Methodology for Efficient Fixed-Point Hardware Implementation of the Sigmoid Function</strong>, <strong>Zhe Pan</strong>, Zonghua Gu, Xiaohong Jiang, Guoquan Zhu, De Ma, <i>IEEE Transactions on Industrial Electronics</i>, 2022, Vol. 69, No. 10, pp. 10694-10703. <a href="https://doi.org/10.1109/TIE.2022.3146573">DOI: 10.1109/TIE.2022.3146573</a></li>
+                <li><strong>An FPGA-Optimized Architecture of Real-time Farneback Optical Flow</strong>, <strong>Zhe Pan</strong>, Yuruo Jin, Xiaohong Jiang, Jian Wu, <i>Proceedings - 28th IEEE International Symposium on Field-Programmable Custom Computing Machines, FCCM 2020</i>, 2020, pp. 223. <a href="https://doi.org/10.1109/FCCM48280.2020.00054">DOI: 10.1109/FCCM48280.2020.00054</a></li>
+                <li><strong>Hybrid XML Parser Based on Software and Hardware Co-design</strong>, <strong>Zhe Pan</strong>, Xiaohong Jiang, Jian Wu, Xiang Li, <i>Proceedings - 27th IEEE International Symposium on Field-Programmable Custom Computing Machines, FCCM 2019</i>, 2019, pp. 325. <a href="https://doi.org/10.1109/FCCM.2019.00066">DOI: 10.1109/FCCM.2019.00066</a></li>
+    
+            </ol>
         </div>
 
         <div id="english-hobbies" class="content-item">
             <h2>Hobbies</h2>
-            <p>In my free time, I enjoy reading, traveling, and playing chess. I also have a passion for photography and exploring new technologies.</p>
+            <ul>
+                <li><strong>Hiking</strong>
+                  <p>I enjoy hiking, appreciating the beauty of nature and the challenge of pushing my limits.</p>
+                </li>
+                <li><strong>Swimming</strong>
+                  <p>Swimming is a sport I really enjoy, as it helps me relax and stay healthy.</p>
+                </li>
+                <li><strong>Cooking</strong>
+                  <p>I love experimenting with different dishes; cooking is a way for me to relax and be creative.</p>
+                </li>
+                <li><strong>Playing the Flute</strong>
+                  <p>Playing the flute is my way of relaxing and enjoying music, the notes help me feel at peace.</p>
+                </li>
+                <li><strong>Making Friends</strong>
+                  <p>I enjoy making friends, sharing moments of life, and building sincere relationships.</p>
+                </li>
+              </ul>
+              
         </div>
     </div>
 
