@@ -1,0 +1,19 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Dimensions
+$container-max-width: {{site.container_max_width}};
+
+$main-max-width: {{ site.main_max_width }};
+
+$pub-max-width: {{ site.pub_max_width }};
+
+@import
+  "variables",
+  "themes",
+  "layout",
+  "base",
+  "distill"
+;
