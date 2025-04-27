@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,38 +65,48 @@
         .content .active {
             display: block;
         }
-  
+
         /* 头像样式 */
         .avatar {
-            width: 120px;  /* 增大头像的宽度 */
-            height: 120px; /* 增大头像的高度 */
-            border-radius: 50%; /* 圆形 */
-            object-fit: cover;  /* 图片填充，保持比例 */
+            width: 120px;
+            /* 增大头像的宽度 */
+            height: 120px;
+            /* 增大头像的高度 */
+            border-radius: 50%;
+            /* 圆形 */
+            object-fit: cover;
+            /* 图片填充，保持比例 */
         }
 
         /* 个人信息样式 */
         .profile {
             display: flex;
             align-items: center;
-            margin-bottom: 30px; /* 增大底部间隔 */
-            padding: 10px; /* 增加内边距，确保头像和名字与边缘有空间 */
-            background-color: #f9f9f9; /* 可选，给个人信息区域加一个背景色 */
-            border-radius: 8px; /* 圆角效果 */
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* 增加阴影效果，使个人信息更突出 */
+            margin-bottom: 30px;
+            /* 增大底部间隔 */
+            padding: 10px;
+            /* 增加内边距，确保头像和名字与边缘有空间 */
+            background-color: #f9f9f9;
+            /* 可选，给个人信息区域加一个背景色 */
+            border-radius: 8px;
+            /* 圆角效果 */
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            /* 增加阴影效果，使个人信息更突出 */
         }
 
         /* 名字样式 */
         .name {
-            margin-left: 20px; /* 增加头像和名字之间的间隔 */
-            font-size: 28px; /* 增大字体大小 */
+            margin-left: 20px;
+            /* 增加头像和名字之间的间隔 */
+            font-size: 28px;
+            /* 增大字体大小 */
             font-weight: bold;
-            color: #333; /* 调整字体颜色 */
+            color: #333;
+            /* 调整字体颜色 */
         }
-
-
-
     </style>
 </head>
+
 <body>
 
     <!-- Navigation Bar -->
@@ -110,7 +121,8 @@
             <a href="https://github.com/Pz1996" target="_blank" title="Github">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="https://scholar.google.com/citations?user=b3Xhrz0AAAAJ&hl=en&oi=ao" target="_blank" title="GoogleScholar">
+            <a href="https://scholar.google.com/citations?user=b3Xhrz0AAAAJ&hl=en&oi=ao" target="_blank"
+                title="GoogleScholar">
                 <i class="fab fa-fw fa-google-plus-g"></i>
             </a>
         </div>
@@ -135,96 +147,122 @@
 
             <h2>教育背景</h2>
             <ul>
-                <li><strong>博士</strong>，计算机科学与技术，浙江大学，2018年9月 - 2024年6月  
+                <li><strong>博士</strong>，计算机科学与技术，浙江大学，2018年9月 - 2024年6月
                     <!-- <br> 导师：何水兵研究员 -->
                 </li>
-                <li><strong>本科    </strong>，计算机科学与技术，浙江大学，2014年9月 - 2018年6月  
+                <li><strong>本科 </strong>，计算机科学与技术，浙江大学，2014年9月 - 2018年6月
                     <!-- <br> 导师：姜晓红副教授 -->
                 </li>
             </ul>
-        
+
             <h2>工作经历</h2>
             <ul>
-                <li><strong>2024年7月 - 至今</strong>，博士后研究员，清华大学计算机科学与技术系  
+                <li><strong>2024年7月 - 至今</strong>，博士后研究员，清华大学计算机科学与技术系
                     <br> 主要研究方向：类脑计算、大模型与图计算
                     <!-- ，合作导师：张悠慧研究员 -->
                 </li>
-                <li><strong>2020年6月 - 2020年9月</strong>，搜索推荐实习生，阿里巴巴搜索推荐事业部  
+                <li><strong>2020年6月 - 2020年9月</strong>，搜索推荐实习生，阿里巴巴搜索推荐事业部
                     <br> 研究高效极大二分团枚举算法的优化与实现。
                 </li>
-                <li><strong>2020年5月 - 2020年12月</strong>，新型架构芯片组实习生，之江实验室  
+                <li><strong>2020年5月 - 2020年12月</strong>，新型架构芯片组实习生，之江实验室
                     <br> 研究硬件加速Sigmoid、Batch Normalization等操作的优化。
                 </li>
-                <li><strong>2019年6月 - 2019年9月</strong>，数字验证实习生，天数智芯公司  
+                <li><strong>2019年6月 - 2019年9月</strong>，数字验证实习生，天数智芯公司
                     <br> 负责数字电路验证与测试，协助完成芯片功能验证。
                 </li>
             </ul>
         </div>
-        
+
         <!-- Publications Section -->
         <div id="publications" class="content-item">
             <h2>发表</h2>
             <ol>
-                <li><strong>AMBEA: Aggressive Maximal Biclique Enumeration in Large Bipartite Graph Computing</strong>, <strong>Zhe Pan</strong>, Xu Li, Shuibing He, Xuechen Zhang, Rui Wang, Yunjun Gao, Gang Chen, Xian-He Sun, <i>IEEE Transactions on Computers</i>, Vol. 73, No. 12, December 2024. <a href="https://doi.org/10.1109/TC.2024.3441864">[PDF]</a></li>
-                <li><strong>Enumeration of Billions of Maximal Bicliques in Bipartite Graphs without Using GPUs</strong>, <strong>Zhe Pan</strong>, Shuibing He, Xu Li, Xuechen Zhang, Yanlong Yin, Rui Wang, Lidan Shou, Mingli Song, Xian-He Sun, Gang Chen, <i>International Conference for High Performance Computing, Networking, Storage and Analysis, SC</i>, 2024. <a href="https://doi.org/10.1109/SC41406.2024.00106">[PDF]</a> <a href="ppt/adambe.pptx">[PPT]</a></li>
-                <li><strong>Efficient Maximal Biclique Enumeration on GPUs</strong>, <strong>Zhe Pan</strong>, Shuibing He, Xu Li, Xuechen Zhang, Rui Wang, Gang Chen, <i>International Conference for High Performance Computing, Networking, Storage and Analysis, SC</i>, 2023. <a href="https://doi.org/10.1145/3581784.3607059">[PDF]</a> <a href="ppt/gmbe.pptx">[PPT]</a> </li>
-                <li><strong>A Modular Approximation Methodology for Efficient Fixed-Point Hardware Implementation of the Sigmoid Function</strong>, <strong>Zhe Pan</strong>, Zonghua Gu, Xiaohong Jiang, Guoquan Zhu, De Ma, <i>IEEE Transactions on Industrial Electronics</i>, 2022, Vol. 69, No. 10, pp. 10694-10703. <a href="https://doi.org/10.1109/TIE.2022.3146573">[PDF]</a></li>
-                <li><strong>An FPGA-Optimized Architecture of Real-time Farneback Optical Flow</strong>, <strong>Zhe Pan</strong>, Yuruo Jin, Xiaohong Jiang, Jian Wu, <i>Proceedings - 28th IEEE International Symposium on Field-Programmable Custom Computing Machines, FCCM 2020</i>, 2020, pp. 223. <a href="https://doi.org/10.1109/FCCM48280.2020.00054">[PDF]</a></li>
-                <li><strong>Hybrid XML Parser Based on Software and Hardware Co-design</strong>, <strong>Zhe Pan</strong>, Xiaohong Jiang, Jian Wu, Xiang Li, <i>Proceedings - 27th IEEE International Symposium on Field-Programmable Custom Computing Machines, FCCM 2019</i>, 2019, pp. 325. <a href="https://doi.org/10.1109/FCCM.2019.00066">[PDF]</a></li>
-    
+                <li><strong>Advanced Maximal Biclique Enumeration on GPUs Using Bitmaps</strong>, <strong>Zhe
+                        Pan</strong>, Shuibing He, Xu Li, Xuechen Zhang, Rui Wang, Yanlong Yin, Gang Chen, <i>IEEE
+                        Transactions on Computers</i>, 2025. </li>
+                <li><strong>AMBEA: Aggressive Maximal Biclique Enumeration in Large Bipartite Graph Computing</strong>,
+                    <strong>Zhe Pan</strong>, Xu Li, Shuibing He, Xuechen Zhang, Rui Wang, Yunjun Gao, Gang Chen,
+                    Xian-He Sun, <i>IEEE Transactions on Computers</i>, Vol. 73, No. 12, December 2024. <a
+                        href="https://doi.org/10.1109/TC.2024.3441864">[PDF]</a>
+                </li>
+                <li><strong>Enumeration of Billions of Maximal Bicliques in Bipartite Graphs without Using
+                        GPUs</strong>, <strong>Zhe Pan</strong>, Shuibing He, Xu Li, Xuechen Zhang, Yanlong Yin, Rui
+                    Wang, Lidan Shou, Mingli Song, Xian-He Sun, Gang Chen, <i>International Conference for High
+                        Performance Computing, Networking, Storage and Analysis, SC</i>, 2024. <a
+                        href="https://doi.org/10.1109/SC41406.2024.00106">[PDF]</a> <a href="ppt/adambe.pptx">[PPT]</a>
+                </li>
+                <li><strong>Efficient Maximal Biclique Enumeration on GPUs</strong>, <strong>Zhe Pan</strong>, Shuibing
+                    He, Xu Li, Xuechen Zhang, Rui Wang, Gang Chen, <i>International Conference for High Performance
+                        Computing, Networking, Storage and Analysis, SC</i>, 2023. <a
+                        href="https://doi.org/10.1145/3581784.3607059">[PDF]</a> <a href="ppt/gmbe.pptx">[PPT]</a> </li>
+                <li><strong>A Modular Approximation Methodology for Efficient Fixed-Point Hardware Implementation of the
+                        Sigmoid Function</strong>, <strong>Zhe Pan</strong>, Zonghua Gu, Xiaohong Jiang, Guoquan Zhu, De
+                    Ma, <i>IEEE Transactions on Industrial Electronics</i>, 2022, Vol. 69, No. 10, pp. 10694-10703. <a
+                        href="https://doi.org/10.1109/TIE.2022.3146573">[PDF]</a></li>
+                <li><strong>An FPGA-Optimized Architecture of Real-time Farneback Optical Flow</strong>, <strong>Zhe
+                        Pan</strong>, Yuruo Jin, Xiaohong Jiang, Jian Wu, <i>Proceedings - 28th IEEE International
+                        Symposium on Field-Programmable Custom Computing Machines, FCCM 2020</i>, 2020, pp. 223. <a
+                        href="https://doi.org/10.1109/FCCM48280.2020.00054">[PDF]</a></li>
+                <li><strong>Hybrid XML Parser Based on Software and Hardware Co-design</strong>, <strong>Zhe
+                        Pan</strong>, Xiaohong Jiang, Jian Wu, Xiang Li, <i>Proceedings - 27th IEEE International
+                        Symposium on Field-Programmable Custom Computing Machines, FCCM 2019</i>, 2019, pp. 325. <a
+                        href="https://doi.org/10.1109/FCCM.2019.00066">[PDF]</a></li>
+
             </ol>
 
         </div>
-        
+
         <!-- Hobbies Section -->
         <div id="hobbies" class="content-item">
             <h2>爱好</h2>
             <ul>
                 <li><strong>爬山</strong>
-                  <p>我喜欢爬山，享受大自然的风光和挑战自我的感觉。</p>
+                    <p>我喜欢爬山，享受大自然的风光和挑战自我的感觉。</p>
                 </li>
                 <li><strong>游泳</strong>
-                  <p>游泳是一项我非常喜欢的运动，能够放松身心并保持健康。</p>
+                    <p>游泳是一项我非常喜欢的运动，能够放松身心并保持健康。</p>
                 </li>
                 <li><strong>做饭</strong>
-                  <p>我喜欢尝试不同的菜肴，做饭是一种让我感到放松和创造的方式。</p>
+                    <p>我喜欢尝试不同的菜肴，做饭是一种让我感到放松和创造的方式。</p>
                 </li>
                 <li><strong>笛子</strong>
-                  <p>吹笛子是我放松和享受音乐的方式，音符可以让我感到平静。</p>
+                    <p>吹笛子是我放松和享受音乐的方式，音符可以让我感到平静。</p>
                 </li>
                 <li><strong>交友</strong>
-                  <p>我喜欢交朋友，分享生活中的点滴并建立真诚的关系。</p>
+                    <p>我喜欢交朋友，分享生活中的点滴并建立真诚的关系。</p>
                 </li>
-              </ul>
-              
+            </ul>
+
         </div>
 
         <!-- English Version -->
         <div id="english-resume" class="content-item">
             <h2>Education</h2>
             <ul>
-                <li><strong>Ph.D.</strong>, Computer Science and Technology, Zhejiang University, Sept 2018 - Jun 2024  
+                <li><strong>Ph.D.</strong>, Computer Science and Technology, Zhejiang University, Sept 2018 - Jun 2024
                     <!-- <br> Advisors: Prof. Shuibing He (Researcher) -->
                 </li>
-                <li><strong>B.S.</strong>, Computer Science and Technology, Zhejiang University, Sept 2014 - Jun 2018  
+                <li><strong>B.S.</strong>, Computer Science and Technology, Zhejiang University, Sept 2014 - Jun 2018
                     <!-- <br> Advisor: Prof. Xiaohong Jiang (Associate Professor) -->
                 </li>
             </ul>
 
             <h2>Work Experience</h2>
             <ul>
-                <li><strong>Jul 2024 - Present</strong>, Postdoctoral Researcher, Department of Computer Science and Technology, Tsinghua University  
+                <li><strong>Jul 2024 - Present</strong>, Postdoctoral Researcher, Department of Computer Science and
+                    Technology, Tsinghua University
                     <br> Research Focus: Brain-Inspired Computing, Large Models, and Graph Computing
                     <!-- , Co-advisor: Prof. Youhui Zhang (Researcher) -->
                 </li>
                 <li><strong>Jun 2020 - Sep 2020</strong>, Search and Recommendation Intern, Alibaba
                     <br> Research Focus: Optimizing and implementing efficient maximal biclique enumeration algorithms.
                 </li>
-                <li><strong>May 2020 - Dec 2020</strong>, New Architecture Chipset Intern, Zhejiang Laboratory  
+                <li><strong>May 2020 - Dec 2020</strong>, New Architecture Chipset Intern, Zhejiang Laboratory
                     <br> Research Focus: Hardware acceleration for Sigmoid, Batch Normalization, and related operations.
                 </li>
                 <li><strong>Jun 2019 - Sep 2019</strong>, Digital Verification Intern, Iluvatar CoreX
-                    <br> Responsibilities: Involved in digital circuit verification and testing, assisting in chip functionality validation.
+                    <br> Responsibilities: Involved in digital circuit verification and testing, assisting in chip
+                    functionality validation.
                 </li>
             </ul>
 
@@ -233,13 +271,37 @@
         <div id="english-publications" class="content-item">
             <h2>Publications</h2>
             <ol>
-                <li><strong>AMBEA: Aggressive Maximal Biclique Enumeration in Large Bipartite Graph Computing</strong>, <strong>Zhe Pan</strong>, Xu Li, Shuibing He, Xuechen Zhang, Rui Wang, Yunjun Gao, Gang Chen, Xian-He Sun, <i>IEEE Transactions on Computers</i>, Vol. 73, No. 12, December 2024. <a href="https://doi.org/10.1109/TC.2024.3441864">[PDF]</a></li>
-                <li><strong>Enumeration of Billions of Maximal Bicliques in Bipartite Graphs without Using GPUs</strong>, <strong>Zhe Pan</strong>, Shuibing He, Xu Li, Xuechen Zhang, Yanlong Yin, Rui Wang, Lidan Shou, Mingli Song, Xian-He Sun, Gang Chen, <i>International Conference for High Performance Computing, Networking, Storage and Analysis, SC</i>, 2024. <a href="https://doi.org/10.1109/SC41406.2024.00106">[PDF]</a> <a href="ppt/adambe.pptx">[PPT]</a> </li>
-                <li><strong>Efficient Maximal Biclique Enumeration on GPUs</strong>, <strong>Zhe Pan</strong>, Shuibing He, Xu Li, Xuechen Zhang, Rui Wang, Gang Chen, <i>International Conference for High Performance Computing, Networking, Storage and Analysis, SC</i>, 2023. <a href="https://doi.org/10.1145/3581784.3607059">[PDF]</a> <a href="ppt/gmbe.pptx">[PPT]</a> </li>
-                <li><strong>A Modular Approximation Methodology for Efficient Fixed-Point Hardware Implementation of the Sigmoid Function</strong>, <strong>Zhe Pan</strong>, Zonghua Gu, Xiaohong Jiang, Guoquan Zhu, De Ma, <i>IEEE Transactions on Industrial Electronics</i>, 2022, Vol. 69, No. 10, pp. 10694-10703. <a href="https://doi.org/10.1109/TIE.2022.3146573">[PDF]</a></li>
-                <li><strong>An FPGA-Optimized Architecture of Real-time Farneback Optical Flow</strong>, <strong>Zhe Pan</strong>, Yuruo Jin, Xiaohong Jiang, Jian Wu, <i>Proceedings - 28th IEEE International Symposium on Field-Programmable Custom Computing Machines, FCCM 2020</i>, 2020, pp. 223. <a href="https://doi.org/10.1109/FCCM48280.2020.00054">[PDF]</a></li>
-                <li><strong>Hybrid XML Parser Based on Software and Hardware Co-design</strong>, <strong>Zhe Pan</strong>, Xiaohong Jiang, Jian Wu, Xiang Li, <i>Proceedings - 27th IEEE International Symposium on Field-Programmable Custom Computing Machines, FCCM 2019</i>, 2019, pp. 325. <a href="https://doi.org/10.1109/FCCM.2019.00066">[PDF]</a></li>
-    
+                <li><strong>Advanced Maximal Biclique Enumeration on GPUs Using Bitmaps</strong>, <strong>Zhe
+                        Pan</strong>, Shuibing He, Xu Li, Xuechen Zhang, Rui Wang, Yanlong Yin, Gang Chen, <i>IEEE
+                        Transactions on Computers</i>, 2025. </li>
+                <li><strong>AMBEA: Aggressive Maximal Biclique Enumeration in Large Bipartite Graph Computing</strong>,
+                    <strong>Zhe Pan</strong>, Xu Li, Shuibing He, Xuechen Zhang, Rui Wang, Yunjun Gao, Gang Chen,
+                    Xian-He Sun, <i>IEEE Transactions on Computers</i>, Vol. 73, No. 12, December 2024. <a
+                        href="https://doi.org/10.1109/TC.2024.3441864">[PDF]</a>
+                </li>
+                <li><strong>Enumeration of Billions of Maximal Bicliques in Bipartite Graphs without Using
+                        GPUs</strong>, <strong>Zhe Pan</strong>, Shuibing He, Xu Li, Xuechen Zhang, Yanlong Yin, Rui
+                    Wang, Lidan Shou, Mingli Song, Xian-He Sun, Gang Chen, <i>International Conference for High
+                        Performance Computing, Networking, Storage and Analysis, SC</i>, 2024. <a
+                        href="https://doi.org/10.1109/SC41406.2024.00106">[PDF]</a> <a href="ppt/adambe.pptx">[PPT]</a>
+                </li>
+                <li><strong>Efficient Maximal Biclique Enumeration on GPUs</strong>, <strong>Zhe Pan</strong>, Shuibing
+                    He, Xu Li, Xuechen Zhang, Rui Wang, Gang Chen, <i>International Conference for High Performance
+                        Computing, Networking, Storage and Analysis, SC</i>, 2023. <a
+                        href="https://doi.org/10.1145/3581784.3607059">[PDF]</a> <a href="ppt/gmbe.pptx">[PPT]</a> </li>
+                <li><strong>A Modular Approximation Methodology for Efficient Fixed-Point Hardware Implementation of the
+                        Sigmoid Function</strong>, <strong>Zhe Pan</strong>, Zonghua Gu, Xiaohong Jiang, Guoquan Zhu, De
+                    Ma, <i>IEEE Transactions on Industrial Electronics</i>, 2022, Vol. 69, No. 10, pp. 10694-10703. <a
+                        href="https://doi.org/10.1109/TIE.2022.3146573">[PDF]</a></li>
+                <li><strong>An FPGA-Optimized Architecture of Real-time Farneback Optical Flow</strong>, <strong>Zhe
+                        Pan</strong>, Yuruo Jin, Xiaohong Jiang, Jian Wu, <i>Proceedings - 28th IEEE International
+                        Symposium on Field-Programmable Custom Computing Machines, FCCM 2020</i>, 2020, pp. 223. <a
+                        href="https://doi.org/10.1109/FCCM48280.2020.00054">[PDF]</a></li>
+                <li><strong>Hybrid XML Parser Based on Software and Hardware Co-design</strong>, <strong>Zhe
+                        Pan</strong>, Xiaohong Jiang, Jian Wu, Xiang Li, <i>Proceedings - 27th IEEE International
+                        Symposium on Field-Programmable Custom Computing Machines, FCCM 2019</i>, 2019, pp. 325. <a
+                        href="https://doi.org/10.1109/FCCM.2019.00066">[PDF]</a></li>
+
             </ol>
         </div>
 
@@ -247,22 +309,22 @@
             <h2>Hobbies</h2>
             <ul>
                 <li><strong>Hiking</strong>
-                  <p>I enjoy hiking, appreciating the beauty of nature and the challenge of pushing my limits.</p>
+                    <p>I enjoy hiking, appreciating the beauty of nature and the challenge of pushing my limits.</p>
                 </li>
                 <li><strong>Swimming</strong>
-                  <p>Swimming is a sport I really enjoy, as it helps me relax and stay healthy.</p>
+                    <p>Swimming is a sport I really enjoy, as it helps me relax and stay healthy.</p>
                 </li>
                 <li><strong>Cooking</strong>
-                  <p>I love experimenting with different dishes; cooking is a way for me to relax and be creative.</p>
+                    <p>I love experimenting with different dishes; cooking is a way for me to relax and be creative.</p>
                 </li>
                 <li><strong>Playing the Flute</strong>
-                  <p>Playing the flute is my way of relaxing and enjoying music, the notes help me feel at peace.</p>
+                    <p>Playing the flute is my way of relaxing and enjoying music, the notes help me feel at peace.</p>
                 </li>
                 <li><strong>Making Friends</strong>
-                  <p>I enjoy making friends, sharing moments of life, and building sincere relationships.</p>
+                    <p>I enjoy making friends, sharing moments of life, and building sincere relationships.</p>
                 </li>
-              </ul>
-              
+            </ul>
+
         </div>
     </div>
 
@@ -307,7 +369,7 @@
             const resumeButton = document.querySelector('.btn-group button[data-content="resume"]');
             const publicationsButton = document.querySelector('.btn-group button[data-content="publications"]');
             const hobbiesButton = document.querySelector('.btn-group button[data-content="hobbies"]');
-            
+
             if (resumeButton) resumeButton.textContent = (Language === 'zh' ? '简历' : 'Resume');
             if (publicationsButton) publicationsButton.textContent = (Language === 'zh' ? '发表' : 'Publications');
             if (hobbiesButton) hobbiesButton.textContent = (Language === 'zh' ? '爱好' : 'Hobbies');
@@ -320,7 +382,7 @@
 
         // 绑定按钮点击事件
         document.querySelectorAll('.btn-group button').forEach(button => {
-            button.addEventListener('click', function() {
+            button.addEventListener('click', function () {
                 const content = this.getAttribute('data-content');
                 if (content === 'language') {
                     toggleLanguage();
@@ -336,4 +398,5 @@
     </script>
 
 </body>
+
 </html>
