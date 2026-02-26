@@ -112,6 +112,39 @@
             font-weight: 600;
             font-family: "Georgia", "Times New Roman", serif;
         }
+
+        /* 放在 <style> 里即可 */
+        .tag {
+            display: inline-block;
+            color: #fff;
+            /* 白色字 */
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 1;
+            padding: 3px 8px;
+            border-radius: 9999px;
+            /* 椭圆 */
+            margin-left: 6px;
+            /* 和标题隔一点距离 */
+            vertical-align: middle;
+        }
+
+        .tag.ccf-a {
+            background: #d32f2f;
+        }
+
+        /* CCF A 红色 */
+        .tag.ccf-b {
+            background: #f57c00;
+        }
+
+        /* CCF B 橙色 */
+        .tag.sci-1 {
+            background: #2e7d32;
+        }
+
+        /* SCI 1区 深绿 */
+        /* 需要别的等级继续加 */
     </style>
 </head>
 
@@ -185,44 +218,50 @@
         <div id="publications" class="content-item">
             <h2>发表</h2>
             <ol>
-                <li><span class="paper-title">Root-Down Exposure for Maximal Clique Enumeration on GPUs</span><br>
+                <li><span class="paper-title">Root-Down Exposure for Maximal Clique Enumeration on GPUs</span>
+                    <span class="tag ccf-a">CCF A</span> <br>
                     <strong>Zhe
                         Pan</strong>, Peng Qu, Youhui Zhang, <i>Proceedings of the 31st ACM SIGPLAN Annual Symposium on
                         Principles and Practice of Parallel Programming, PPoPP</i>, 2026. <a
                         href="https://doi.org/10.1145/3774934.3786449">[PDF]</a> <a href="ppt/RDMCE.pptx">[PPT]</a>
                 </li>
-                <li><span class="paper-title">Advanced Maximal Biclique Enumeration on GPUs Using Bitmaps</span><br>
+                <li><span class="paper-title">Advanced Maximal Biclique Enumeration on GPUs Using Bitmaps</span>
+                    <span class="tag ccf-a">CCF A</span> <br>
                     <strong>Zhe
                         Pan</strong>, Shuibing He, Xu Li, Xuechen Zhang, Rui Wang, Yanlong Yin, Gang Chen, <i>IEEE
                         Transactions on Computers</i>, Vol. 74, No. 8, pp. 2552-2566, August 2025. <a
                         href="https://doi.org/10.1109/TC.2025.3566898">[PDF]</a>
                 </li>
                 <li><span class="paper-title">AMBEA: Aggressive Maximal Biclique Enumeration in Large Bipartite Graph
-                        Computing</span><br>
+                        Computing</span> <span class="tag ccf-a">CCF A</span><br>
                     <strong>Zhe Pan</strong>, Xu Li, Shuibing He, Xuechen Zhang, Rui Wang, Yunjun Gao, Gang Chen,
                     Xian-He Sun, <i>IEEE Transactions on Computers</i>, Vol. 73, No. 12, December 2024. <a
                         href="https://doi.org/10.1109/TC.2024.3441864">[PDF]</a>
                 </li>
                 <li><span class="paper-title">Enumeration of Billions of Maximal Bicliques in Bipartite Graphs without
                         Using
-                        GPUs</span><br> <strong>Zhe Pan</strong>, Shuibing He, Xu Li, Xuechen Zhang, Yanlong Yin, Rui
+                        GPUs</span><span class="tag ccf-a">CCF A</span><br> <strong>Zhe Pan</strong>, Shuibing He, Xu
+                    Li, Xuechen Zhang, Yanlong Yin, Rui
                     Wang, Lidan Shou, Mingli Song, Xian-He Sun, Gang Chen, <i>International Conference for High
                         Performance Computing, Networking, Storage and Analysis, SC</i>, 2024. <a
                         href="https://doi.org/10.1109/SC41406.2024.00106">[PDF]</a> <a href="ppt/adambe.pptx">[PPT]</a>
                 </li>
-                <li><span class="paper-title">Efficient Maximal Biclique Enumeration on GPUs</span><br> <strong>Zhe
+                <li><span class="paper-title">Efficient Maximal Biclique Enumeration on GPUs</span><span
+                        class="tag ccf-a">CCF A</span><br> <strong>Zhe
                         Pan</strong>, Shuibing
                     He, Xu Li, Xuechen Zhang, Rui Wang, Gang Chen, <i>International Conference for High Performance
                         Computing, Networking, Storage and Analysis, SC</i>, 2023. <a
                         href="https://doi.org/10.1145/3581784.3607059">[PDF]</a> <a href="ppt/gmbe.pptx">[PPT]</a> </li>
                 <li><span class="paper-title">A Modular Approximation Methodology for Efficient Fixed-Point Hardware
                         Implementation of the
-                        Sigmoid Function</span><br> <strong>Zhe Pan</strong>, Zonghua Gu, Xiaohong Jiang, Guoquan Zhu,
+                        Sigmoid Function</span><span class="tag sci-1">SCI Q1</span><br> <strong>Zhe Pan</strong>,
+                    Zonghua Gu, Xiaohong Jiang, Guoquan Zhu,
+
                     De
                     Ma, <i>IEEE Transactions on Industrial Electronics</i>, 2022, Vol. 69, No. 10, pp. 10694-10703. <a
                         href="https://doi.org/10.1109/TIE.2022.3146573">[PDF]</a></li>
                 <li><span class="paper-title">VDHA: Vector-Driven Hash Aggregation for Sparse Matrix-Sparse Vector
-                        Multiplication on GPUs</span><br>
+                        Multiplication on GPUs</span><span class="tag ccf-a">CCF A</span><br>
                     Yuchen Li, <strong>Zhe Pan</strong>, Peng Qu, Youhui Zhang, <i>Proceedings of the 31st ACM SIGPLAN
                         Annual Symposium on Principles and Practice of Parallel Programming, PPoPP</i>, 2026. <a
                         href="https://doi.org/10.1145/3774934.3786447">[PDF]</a>
@@ -304,44 +343,50 @@
         <div id="english-publications" class="content-item">
             <h2>Publications</h2>
             <ol>
-                <li><span class="paper-title">Root-Down Exposure for Maximal Clique Enumeration on GPUs</span><br>
+                <li><span class="paper-title">Root-Down Exposure for Maximal Clique Enumeration on GPUs</span>
+                    <span class="tag ccf-a">CCF A</span> <br>
                     <strong>Zhe
                         Pan</strong>, Peng Qu, Youhui Zhang, <i>Proceedings of the 31st ACM SIGPLAN Annual Symposium on
                         Principles and Practice of Parallel Programming, PPoPP</i>, 2026. <a
                         href="https://doi.org/10.1145/3774934.3786449">[PDF]</a> <a href="ppt/RDMCE.pptx">[PPT]</a>
                 </li>
-                <li><span class="paper-title">Advanced Maximal Biclique Enumeration on GPUs Using Bitmaps</span><br>
+                <li><span class="paper-title">Advanced Maximal Biclique Enumeration on GPUs Using Bitmaps</span>
+                    <span class="tag ccf-a">CCF A</span> <br>
                     <strong>Zhe
                         Pan</strong>, Shuibing He, Xu Li, Xuechen Zhang, Rui Wang, Yanlong Yin, Gang Chen, <i>IEEE
                         Transactions on Computers</i>, Vol. 74, No. 8, pp. 2552-2566, August 2025. <a
                         href="https://doi.org/10.1109/TC.2025.3566898">[PDF]</a>
                 </li>
                 <li><span class="paper-title">AMBEA: Aggressive Maximal Biclique Enumeration in Large Bipartite Graph
-                        Computing</span><br>
+                        Computing</span> <span class="tag ccf-a">CCF A</span><br>
                     <strong>Zhe Pan</strong>, Xu Li, Shuibing He, Xuechen Zhang, Rui Wang, Yunjun Gao, Gang Chen,
                     Xian-He Sun, <i>IEEE Transactions on Computers</i>, Vol. 73, No. 12, December 2024. <a
                         href="https://doi.org/10.1109/TC.2024.3441864">[PDF]</a>
                 </li>
                 <li><span class="paper-title">Enumeration of Billions of Maximal Bicliques in Bipartite Graphs without
                         Using
-                        GPUs</span><br> <strong>Zhe Pan</strong>, Shuibing He, Xu Li, Xuechen Zhang, Yanlong Yin, Rui
+                        GPUs</span><span class="tag ccf-a">CCF A</span><br> <strong>Zhe Pan</strong>, Shuibing He, Xu
+                    Li, Xuechen Zhang, Yanlong Yin, Rui
                     Wang, Lidan Shou, Mingli Song, Xian-He Sun, Gang Chen, <i>International Conference for High
                         Performance Computing, Networking, Storage and Analysis, SC</i>, 2024. <a
                         href="https://doi.org/10.1109/SC41406.2024.00106">[PDF]</a> <a href="ppt/adambe.pptx">[PPT]</a>
                 </li>
-                <li><span class="paper-title">Efficient Maximal Biclique Enumeration on GPUs</span><br> <strong>Zhe
+                <li><span class="paper-title">Efficient Maximal Biclique Enumeration on GPUs</span><span
+                        class="tag ccf-a">CCF A</span><br> <strong>Zhe
                         Pan</strong>, Shuibing
                     He, Xu Li, Xuechen Zhang, Rui Wang, Gang Chen, <i>International Conference for High Performance
                         Computing, Networking, Storage and Analysis, SC</i>, 2023. <a
                         href="https://doi.org/10.1145/3581784.3607059">[PDF]</a> <a href="ppt/gmbe.pptx">[PPT]</a> </li>
                 <li><span class="paper-title">A Modular Approximation Methodology for Efficient Fixed-Point Hardware
                         Implementation of the
-                        Sigmoid Function</span><br> <strong>Zhe Pan</strong>, Zonghua Gu, Xiaohong Jiang, Guoquan Zhu,
+                        Sigmoid Function</span><span class="tag sci-1">SCI Q1</span><br> <strong>Zhe Pan</strong>,
+                    Zonghua Gu, Xiaohong Jiang, Guoquan Zhu,
+
                     De
                     Ma, <i>IEEE Transactions on Industrial Electronics</i>, 2022, Vol. 69, No. 10, pp. 10694-10703. <a
                         href="https://doi.org/10.1109/TIE.2022.3146573">[PDF]</a></li>
                 <li><span class="paper-title">VDHA: Vector-Driven Hash Aggregation for Sparse Matrix-Sparse Vector
-                        Multiplication on GPUs</span><br>
+                        Multiplication on GPUs</span><span class="tag ccf-a">CCF A</span><br>
                     Yuchen Li, <strong>Zhe Pan</strong>, Peng Qu, Youhui Zhang, <i>Proceedings of the 31st ACM SIGPLAN
                         Annual Symposium on Principles and Practice of Parallel Programming, PPoPP</i>, 2026. <a
                         href="https://doi.org/10.1145/3774934.3786447">[PDF]</a>
